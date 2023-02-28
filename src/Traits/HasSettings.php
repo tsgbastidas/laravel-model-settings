@@ -34,14 +34,14 @@ trait HasSettings
         return [];
     }
 
-    public function __call($name, $args)
-    {
-        if (isset($this->invokeSettingsBy) && $name === $this->invokeSettingsBy) {
-            return $this->settings();
-        }
-
-        return call_user_func(get_parent_class($this) . '::__call', $name, $args);
-    }
+//    public function __call($name, $args)
+//    {
+//        if (isset($this->invokeSettingsBy) && $name === $this->invokeSettingsBy) {
+//            return $this->settings();
+//        }
+//
+//        return call_user_func(get_parent_class($this) . '::__call', $name, $args);
+//    }
 
     abstract public function getSettingsValue(): array;
 
